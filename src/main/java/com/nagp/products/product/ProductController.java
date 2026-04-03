@@ -13,6 +13,11 @@ public class ProductController {
 
     private final ProductService service;
 
+    @GetMapping("/test")
+    public String getTest(){
+        return "test_success";
+    }
+
     @PostMapping
     public Product create(@RequestBody Product product){
         return service.create(product);
