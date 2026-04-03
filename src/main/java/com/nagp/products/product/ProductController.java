@@ -13,7 +13,7 @@ public class ProductController {
 
     private final ProductService service;
 
-    @GetMapping("/test")
+    @GetMapping("/test/test")
     public String getTest(){
         return "test_success";
     }
