@@ -88,4 +88,8 @@ public class ProductService {
         );
         return repo.findAll(pageable);
     }
+
+    public void deleteAll(){
+        repo.deleteAll();
+    }
 }

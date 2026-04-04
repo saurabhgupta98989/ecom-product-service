@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -21,6 +22,13 @@ public class ProductController {
     @PostMapping
     public Product create(@RequestBody Product product){
         return service.create(product);
+    }
+
+    @PostMapping("/bulk")
+    public void bulkCreate(@RequestBody List<Product> products) {
+        products.forEach(product -> {
+            service.create(product);
+        });
     }
 
     @PatchMapping("/{id}")
@@ -48,5 +56,11 @@ public class ProductController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id){
         service.delete(id);
+    }
+
+
+    @DeleteMapping("/all")
+    public void deleteAll(){
+        service.deleteAll();
     }
 }
