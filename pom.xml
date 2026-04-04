@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.nagp.products</groupId>
 	<artifactId>ecom-product-service</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>ecom-product-service</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>

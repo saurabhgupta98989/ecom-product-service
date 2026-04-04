@@ -15,7 +15,7 @@ public class ProductController {
 
     @GetMapping("/test/test")
     public String getTest(){
-        return "test_success2";
+        return "test_success3";
     }
 
     @PostMapping
